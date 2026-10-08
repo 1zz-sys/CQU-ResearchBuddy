@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CQU ResearchBuddy</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+        <div class="tag">AI · 科研入门</div>
+
+        <h1>CQU ResearchBuddy</h1>
+
+        <p class="subtitle">
+            面向本科科研新人的 AI 科研入门助手
+        </p>
+    </header>
+
+
+    <!-- 功能切换 -->
+    <div class="mode-list">
+
+        <button class="mode active" data-mode="paper">
+            📄 论文理解
+        </button>
+
+        <button class="mode" data-mode="plan">
+            📅 科研规划
+        </button>
+
+        <button class="mode" data-mode="record">
+            🧪 实验记录
+        </button>
+
+    </div>
+
+
+    <!-- 输入区域 -->
+    <div class="card">
+
+        <div class="card-header">
+
+            <div>
+                <h2 id="title">论文理解</h2>
+
+                <p id="description">
+                    粘贴论文摘要或论文片段，
+                    AI 帮你快速理解。
+                </p>
+            </div>
+
+        </div>
+
+<div id="pdf-area" class="pdf-area">
+
+    <input
+        type="file"
+        id="pdf-input"
+        accept=".pdf"
+        hidden
+    >
+
+    <button
+        id="pdf-btn"
+        class="secondary-btn"
+    >
+        📎 上传 PDF 论文
+    </button>
+
+    <span id="pdf-name">
+        暂未选择文件
+    </span>
+
+</div>
+        <textarea
+            id="input"
+            placeholder="请粘贴论文摘要或论文内容……"
+        ></textarea>
+
+
+        <div class="tool-buttons">
+
+            <button id="example-btn" class="secondary-btn">
+                ✨ 填入示例
+            </button>
+
+            <button id="clear-btn" class="secondary-btn">
+                🗑 清空
+            </button>
+
+        </div>
+
+
+        <button id="submit" class="submit">
+            开始分析
+        </button>
+
+    </div>
+
+
+    <!-- AI 输出 -->
+    <div id="result-card" class="card result-card hidden">
+
+        <div class="result-header">
+
+            <h2>AI 分析结果</h2>
+
+            <button id="copy-btn" class="copy-btn">
+                📋 复制结果
+            </button>
+
+        </div>
+
+
+        <div id="loading" class="loading hidden">
+
+            <div class="spinner"></div>
+
+            <span>AI 正在分析，请稍候……</span>
+
+        </div>
+
+
+        <div id="result"></div>
+
+    </div>
+
+
+    <footer>
+
+        <p>
+            CQU ResearchBuddy · AI Campus Project
+        </p>
+
+        <p class="footer-note">
+            AI 结果仅作为科研学习辅助，请结合原始资料判断。
+        </p>
+
+    </footer>
+
+</div>
+
+
+<script src="/static/app.js"></script>
+
+</body>
+
+</html>

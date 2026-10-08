@@ -1,0 +1,470 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+    font-family:
+        "Microsoft YaHei",
+        "PingFang SC",
+        Arial,
+        sans-serif;
+
+    background:
+        linear-gradient(
+            180deg,
+            #f3f6fb 0%,
+            #f7f9fc 100%
+        );
+
+    color: #172033;
+}
+
+
+.container {
+    width: 90%;
+    max-width: 950px;
+
+    margin: 0 auto;
+
+    padding: 55px 0;
+}
+
+
+/* =========================
+   顶部
+   ========================= */
+
+header {
+    text-align: center;
+
+    margin-bottom: 34px;
+}
+
+
+.tag {
+    display: inline-block;
+
+    padding: 6px 13px;
+
+    margin-bottom: 13px;
+
+    border-radius: 20px;
+
+    background: #e8eef8;
+
+    color: #475569;
+
+    font-size: 13px;
+}
+
+
+header h1 {
+    margin: 0;
+
+    font-size: 40px;
+
+    letter-spacing: -1px;
+}
+
+
+.subtitle {
+    margin-top: 11px;
+
+    color: #6b7280;
+
+    font-size: 16px;
+}
+
+
+/* =========================
+   三个功能按钮
+   ========================= */
+
+.mode-list {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 26px;
+}
+
+
+.mode {
+    padding: 14px 24px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: white;
+
+    color: #253047;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 18px
+        rgba(17, 24, 39, 0.06);
+
+    transition: 0.2s;
+}
+
+
+.mode:hover {
+    transform: translateY(-2px);
+}
+
+
+.mode.active {
+    background: #111827;
+
+    color: white;
+}
+
+
+/* =========================
+   卡片
+   ========================= */
+
+.card {
+    background: white;
+
+    padding: 32px;
+
+    margin-bottom: 24px;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 35px
+        rgba(17, 24, 39, 0.07);
+}
+
+
+.card h2 {
+    margin-top: 0;
+
+    margin-bottom: 8px;
+
+    font-size: 25px;
+}
+
+
+.card p {
+    color: #667085;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   输入框
+   ========================= */
+
+textarea {
+    width: 100%;
+
+    height: 230px;
+
+    margin-top: 8px;
+
+    padding: 18px;
+
+    border:
+        1px solid #d9dee7;
+
+    border-radius: 12px;
+
+    outline: none;
+
+    resize: vertical;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    font-family: inherit;
+
+    transition: 0.2s;
+}
+
+
+textarea:focus {
+    border-color: #8492a6;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(132, 146, 166, 0.12);
+}
+
+
+/* =========================
+   工具按钮
+   ========================= */
+
+.tool-buttons {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 14px;
+}
+
+
+.secondary-btn {
+    padding: 9px 15px;
+
+    border:
+        1px solid #d9dee7;
+
+    border-radius: 9px;
+
+    background: white;
+
+    color: #475569;
+
+    cursor: pointer;
+
+    font-size: 14px;
+}
+
+
+.secondary-btn:hover {
+    background: #f6f7f9;
+}
+
+
+/* =========================
+   主按钮
+   ========================= */
+
+.submit {
+    width: 100%;
+
+    margin-top: 18px;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 11px;
+
+    background: #111827;
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.submit:hover {
+    background: #1f2937;
+}
+
+
+.submit:disabled {
+    opacity: 0.55;
+
+    cursor: not-allowed;
+}
+
+
+/* =========================
+   AI结果区域
+   ========================= */
+
+.result-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 15px;
+}
+
+
+.result-header h2 {
+    margin: 0;
+}
+
+
+.copy-btn {
+    padding: 8px 13px;
+
+    border:
+        1px solid #d9dee7;
+
+    border-radius: 8px;
+
+    background: white;
+
+    cursor: pointer;
+
+    color: #475569;
+}
+
+
+.copy-btn:hover {
+    background: #f6f7f9;
+}
+
+
+#result {
+    white-space: pre-wrap;
+
+    line-height: 1.9;
+
+    font-size: 16px;
+
+    color: #263247;
+}
+
+
+/* =========================
+   加载动画
+   ========================= */
+
+.loading {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 20px 0;
+
+    color: #667085;
+}
+
+
+.spinner {
+    width: 19px;
+
+    height: 19px;
+
+    border:
+        3px solid #e5e7eb;
+
+    border-top-color:
+        #111827;
+
+    border-radius: 50%;
+
+    animation:
+        spin 0.8s linear infinite;
+}
+
+
+@keyframes spin {
+
+    to {
+        transform:
+            rotate(360deg);
+    }
+
+}
+
+
+/* =========================
+   Footer
+   ========================= */
+
+footer {
+    text-align: center;
+
+    margin-top: 42px;
+
+    color: #94a3b8;
+
+    font-size: 13px;
+}
+
+
+footer p {
+    margin: 5px;
+}
+
+
+.footer-note {
+    font-size: 12px;
+}
+
+
+/* =========================
+   通用
+   ========================= */
+
+.hidden {
+    display: none !important;
+}
+
+
+/* =========================
+   手机适配
+   ========================= */
+
+@media (max-width: 600px) {
+
+    .container {
+        width: 94%;
+
+        padding: 28px 0;
+    }
+
+    header h1 {
+        font-size: 31px;
+    }
+
+    .card {
+        padding: 22px;
+    }
+
+    .mode {
+        flex: 1;
+
+        min-width: 100px;
+
+        padding: 12px;
+    }
+
+    .result-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+}
+.pdf-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-top: 16px;
+    margin-bottom: 12px;
+
+    flex-wrap: wrap;
+}
+
+#pdf-name {
+    color: #6b7280;
+    font-size: 14px;
+}
